@@ -1,0 +1,198 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "CalcAppStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CalcAppStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CalcAppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "CalcAppStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "notificationArns": [],
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/1526a36662c6735f863b39d9a39aac0405ebde048af0eff872a49d37d55cffaf.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CalcAppStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CalcAppStack.assets"
+      ],
+      "metadata": {
+        "/CalcAppStack/GitHubOwner": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GitHubOwner"
+          }
+        ],
+        "/CalcAppStack/GitHubRepo": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GitHubRepo"
+          }
+        ],
+        "/CalcAppStack/GitHubBranch": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GitHubBranch"
+          }
+        ],
+        "/CalcAppStack/GitHubTokenSecretName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GitHubTokenSecretName"
+          }
+        ],
+        "/CalcAppStack/CalculateFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculateFunctionServiceRoleF6AD8606"
+          }
+        ],
+        "/CalcAppStack/CalculateFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculateFunction0391BD8B"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiDD909B8B"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiCloudWatchRole71064C1E"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiAccount05DAB6B8"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiDeploymentEF1A1530c3ecd474e7a8a280b2573936161f2f11"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiDeploymentStageprodD98406F9"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiEndpoint0B859CBB"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApiOPTIONS0DDF8604"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Default/calculate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApicalculateBBFC9F30"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Default/calculate/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApicalculateOPTIONSB4F1EC8D"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Default/calculate/POST/ApiPermission.CalcAppStackCalculatorApi9183852B.POST..calculate": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApicalculatePOSTApiPermissionCalcAppStackCalculatorApi9183852BPOSTcalculate694A79F6"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Default/calculate/POST/ApiPermission.Test.CalcAppStackCalculatorApi9183852B.POST..calculate": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApicalculatePOSTApiPermissionTestCalcAppStackCalculatorApi9183852BPOSTcalculate7024C27B"
+          }
+        ],
+        "/CalcAppStack/CalculatorApi/Default/calculate/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorApicalculatePOSTD3A1D9BF"
+          }
+        ],
+        "/CalcAppStack/CalculatorAmplifyApp": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorAmplifyApp"
+          }
+        ],
+        "/CalcAppStack/CalculatorAmplifyBranch": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CalculatorAmplifyBranch"
+          }
+        ],
+        "/CalcAppStack/ApiBaseUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiBaseUrl"
+          }
+        ],
+        "/CalcAppStack/AmplifyAppId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyAppId"
+          }
+        ],
+        "/CalcAppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CalcAppStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CalcAppStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CalcAppStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
